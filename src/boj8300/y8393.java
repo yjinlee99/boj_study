@@ -2,7 +2,7 @@ package boj8300;
 
 import java.util.Scanner;
 
-public class y8390 {
+public class y8393 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
