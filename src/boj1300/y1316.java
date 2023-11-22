@@ -12,13 +12,23 @@ public class y1316 {
         int result = 0;
         for(int i=0; i<n; i++) {
             String s = br.readLine();
+            result++;
             int[] alp = new int[26];
             alp[s.charAt(0)-'a']++;
-            for(int j=0; j<s.length(); j++){
+            for(int j=1; j<s.length(); j++){
                 char c = s.charAt(j);
                 if(alp[c-'a'] !=0) {
+                    if (s.charAt(j) == s.charAt(j-1)) continue;
+                    else {
+                        result--;
+                        break;
+                    }
+                }
+                else {
+                    alp[c-'a'] ++;
                 }
             }
         }
+        System.out.println(result);
     }
 }
